@@ -1,0 +1,134 @@
+//Exercicio 8
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o raio da lata de óleo (R): ");
+        double raio = scanner.nextDouble();
+
+        System.out.print("Digite a altura da lata de óleo (A): ");
+        double altura = scanner.nextDouble();
+
+        double volume = 3.14159 * raio * raio * altura;
+
+        System.out.printf("O volume da lata de óleo é: %.2f\n", volume);
+
+        scanner.close();
+    }
+}
+
+//Exercicio 9
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a idade em anos: ");
+        int anos = scanner.nextInt();
+
+        System.out.print("Digite a idade em meses: ");
+        int meses = scanner.nextInt();
+
+        System.out.print("Digite a idade em dias: ");
+        int dias = scanner.nextInt();
+
+        int idadeEmDias = anos * 365 + meses * 30 + dias;
+
+        System.out.println("A idade em dias é: " + idadeEmDias);
+
+        scanner.close();
+    }
+}
+
+// Exercicio 10
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número inteiro: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int num2 = scanner.nextInt();
+
+        System.out.println("Os números são iguais? " + (num1 == num2));
+        System.out.println("Os números são diferentes? " + (num1 != num2));
+        System.out.println("O primeiro número é maior que o segundo? " + (num1 > num2));
+        System.out.println("O primeiro número é menor que o segundo? " + (num1 < num2));
+        System.out.println("O primeiro número é maior ou igual ao segundo? " + (num1 >= num2));
+        System.out.println("O primeiro número é menor ou igual ao segundo? " + (num1 <= num2));
+
+        scanner.close();
+    }
+}
+
+// Exercicio 11
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = scanner.nextDouble();
+      
+        double maior = Math.max(num1, num2);
+        double menor = Math.min(num1, num2);
+
+        double diferenca = maior - menor;
+
+        System.out.println("A diferença entre o maior e o menor número é: " + diferenca);
+
+        scanner.close();
+    }
+}
+
+// Exercicio 12
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite a primeira nota: ");
+        double nota1 = scanner.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double nota2 = scanner.nextDouble();
+
+        System.out.print("Digite a terceira nota: ");
+        double nota3 = scanner.nextDouble();
+
+        System.out.print("Digite a quarta nota: ");
+        double nota4 = scanner.nextDouble();
+
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        if (media >= 7) {
+            System.out.println("Parabéns! Você foi aprovado com média " + media);
+        } else {
+            System.out.println("Sua média é " + media + ". Você está em recuperação.");
+
+            System.out.print("Digite a nota de recuperação: ");
+            double notaRecuperacao = scanner.nextDouble();
+
+            double novaMedia = (media + notaRecuperacao) / 2;
+
+            if (novaMedia >= 7) {
+                System.out.println("Parabéns! Você foi aprovado na recuperação com média " + novaMedia);
+            } else {
+                System.out.println("Sua média final é " + novaMedia + ". Você não foi aprovado.");
+            }
+        }
+
+        scanner.close();
+    }
+}
